@@ -8,6 +8,7 @@ export interface ClientConfiguration {
   devGuildId?: string;
   watchChannelId?: string;
   notifyChannelId?: string;
+  welcomeMessage?: boolean;
 }
 
 export class Client extends Discord.Client {
@@ -18,6 +19,7 @@ export class Client extends Discord.Client {
   devGuildId?: string;
   watchChannelId?: string;
   notifyChannelId?: string;
+  welcomeMessage: boolean;
 
   constructor(config: ClientConfiguration) {
     super({
@@ -25,12 +27,14 @@ export class Client extends Discord.Client {
     });
 
     this.token = config.token;
-    this.color = config.color || "#ff0000";
+    this.color = config.color || "#2563eb";
     this.thumbnail = config.thumbnail || "https://images.pexels.com/photos/5244033/pexels-photo-5244033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
 
     this.devGuildId = config.devGuildId;
     this.watchChannelId = config.watchChannelId;
     this.notifyChannelId = config.notifyChannelId;
+
+    this.welcomeMessage = config.welcomeMessage ?? true;
 
     this.start().then();
   }
