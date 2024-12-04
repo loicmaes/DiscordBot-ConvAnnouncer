@@ -14,7 +14,8 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "start:brut": "ts-node ./src/app.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",

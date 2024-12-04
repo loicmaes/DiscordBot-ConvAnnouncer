@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN yarn install
 
-RUN yarn build
+RUN yarn start:brut
 
 COPY . .
 
