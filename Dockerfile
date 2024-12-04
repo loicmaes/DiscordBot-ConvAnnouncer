@@ -6,8 +6,6 @@ COPY package*.json ./
 
 RUN yarn install
 
-RUN yarn start:brut
-
 COPY . .
 
-CMD ["yarn", "start"]
+CMD ["yarn", "start:brut"]
