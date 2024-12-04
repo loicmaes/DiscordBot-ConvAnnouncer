@@ -1,0 +1,14 @@
+{
+  "name": "ConvAnnouncer",
+  "version": "1.0.0",
+  "description": "Découvre Carlos ! L'autre couillon qui t'appelle quand tu es le premier connecté !",
+  "main": "app.ts",
+  "repository": "git@github.com:loicmaes/DiscordBot-ConvAnnouncer.git",
+  "author": "loicmaes <production@maesloic.fr>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "yarn@1.22.22"
+}
