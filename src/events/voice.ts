@@ -8,12 +8,8 @@ export default {
   callback: async (client: Client, oldState, newState) => {
     if (!newState.channel || oldState.channel?.id === newState.channel.id) return;
 
-    console.log("J'ai un channel");
-
     let members = newState.channel.members.map((k, v) => ({ k, v }));
     if (members.length !== 1) return;
-
-    console.log("J'ai des membres !");
 
     await sendMessage(
         await findChannel<TextChannel>(client, client.devGuildId, client.notifyChannelId),
